@@ -415,22 +415,22 @@ public class WheelView extends View {
                 startX = 10;
             }
             endX = measuredWidth - startX;
-            canvas.drawLine(startX, firstLineY, endX, firstLineY, paintIndicator);
-            canvas.drawLine(startX, secondLineY, endX, secondLineY, paintIndicator);
+            canvas.drawLine(0, firstLineY, measuredWidth, firstLineY, paintIndicator);
+            canvas.drawLine(0, secondLineY, measuredWidth, secondLineY, paintIndicator);
         }else if (dividerType == DividerType.FILL) {
 
             int canvasWidth = canvas.getWidth();
             //修改画笔颜色
 //            paintIndicator.setColor(0xFFFF88B8);//A:ff,R:8b,G:c5,B:ba
-            int left2 = 40;
-            int right2 = canvasWidth - 40;
+            int left2 = 0;
+            int right2 = canvasWidth;
             RectF r1 = new RectF();
             r1.left = left2;
             r1.top = firstLineY ;
             r1.right = right2;
             r1.bottom = secondLineY;
 
-            canvas.drawRoundRect(r1,20,20, paintIndicator);
+            canvas.drawRoundRect(r1,0,0, paintIndicator);
         } else if (dividerType == DividerType.CIRCLE) {
             //分割线为圆圈形状
             paintIndicator.setStyle(Paint.Style.STROKE);

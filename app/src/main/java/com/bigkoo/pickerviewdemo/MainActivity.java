@@ -36,6 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TimePickerView pvTime, pvCustomTime, pvCustomLunar;
     private OptionsPickerView pvOptions, pvCustomOptions, pvNoLinkOptions;
     private ArrayList<CardBean> cardItem = new ArrayList<>();
+    private List<List<CardBean>> cardItemsd = new ArrayList<>();
 
     private ArrayList<String> food = new ArrayList<>();
     private ArrayList<String> clothes = new ArrayList<>();
@@ -304,6 +306,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 })
                 .setContentTextSize(18)
+                .setDividerType(WheelView.DividerType.FILL)
                 .setType(new boolean[]{false, false, false, true, true, true})
                 .setLabel("年", "月", "日", "时", "分", "秒")
                 .setLineSpacingMultiplier(1.2f)
@@ -441,6 +444,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 })
                 .setItemVisibleCount(5)
+                .setDividerType(WheelView.DividerType.FILL)
                 // .setSelectOptions(0, 1, 1)
                 .build();
         pvNoLinkOptions.setNPicker(food, clothes, computer);
@@ -490,15 +494,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void getCardData() {
         for (int i = 0; i < 5; i++) {
-            cardItem.add(new CardBean(i, "No.ABC12345 " + i));
+            cardItem.add(new CardBean(i, "是否是" + i));
+        }
+        for (int i = 0; i < 5; i++) {
+            cardItemsd.add(cardItem);
         }
 
-        for (int i = 0; i < cardItem.size(); i++) {
-            if (cardItem.get(i).getCardNo().length() > 6) {
-                String str_item = cardItem.get(i).getCardNo().substring(0, 6) + "...";
-                cardItem.get(i).setCardNo(str_item);
-            }
-        }
+//        for (int i = 0; i < cardItem.size(); i++) {
+//            if (cardItem.get(i).getCardNo().length() > 6) {
+//                String str_item = cardItem.get(i).getCardNo().substring(0, 6) + "...";
+//                cardItem.get(i).setCardNo(str_item);
+//            }
+//        }
     }
 
     private void getNoLinkData() {
