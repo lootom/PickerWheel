@@ -201,6 +201,11 @@ public class OptionsPickerBuilder {
         return this;
     }
 
+    public OptionsPickerBuilder setTypeface_select(Typeface font) {
+        mPickerOptions.font_select = font;
+        return this;
+    }
+
     public OptionsPickerBuilder setTypeface(Typeface font) {
         mPickerOptions.font = font;
         return this;

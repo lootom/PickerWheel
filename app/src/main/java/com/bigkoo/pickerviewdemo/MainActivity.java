@@ -3,6 +3,7 @@ package com.bigkoo.pickerviewdemo;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -411,6 +412,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setLineSpacingMultiplier(2)
                 .setContentTextSize(16)
                 .isDialog(false)
+                .setTypeface_select(Typeface.DEFAULT_BOLD)
                 .setTextColorOut(0xFF6D7278)
                 .setTextColorCenter(0xFFFF0068)
                 .setDividerType(WheelView.DividerType.FILL)

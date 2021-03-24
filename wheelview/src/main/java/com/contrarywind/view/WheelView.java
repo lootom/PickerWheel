@@ -35,6 +35,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class WheelView extends View {
 
+    public void setTypeface_select(Typeface font) {
+        typeface_select = font;
+        paintCenterText.setTypeface(typeface_select);
+    }
+
     public enum ACTION { // 点击，滑翔(滑到尽头)，拖拽事件
         CLICK, FLING, DAGGLE
     }
@@ -74,6 +79,9 @@ public class WheelView extends View {
 
 
     private Typeface typeface = Typeface.MONOSPACE;//字体样式，默认是等宽字体
+
+
+    private Typeface typeface_select = Typeface.DEFAULT_BOLD;//字体样式，默认是等宽字体
     private int textColorOut;
     private int textColorCenter;
     private int dividerColor;
@@ -197,7 +205,7 @@ public class WheelView extends View {
         paintCenterText.setColor(textColorCenter);
         paintCenterText.setAntiAlias(true);
         paintCenterText.setTextScaleX(1.1F);
-        paintCenterText.setTypeface(Typeface.DEFAULT_BOLD);
+        paintCenterText.setTypeface(typeface_select);
         paintCenterText.setTextSize(textSize);
 
         paintIndicator = new Paint();
@@ -295,7 +303,6 @@ public class WheelView extends View {
     public final void setTypeface(Typeface font) {
         typeface = font;
         paintOuterText.setTypeface(typeface);
-        paintCenterText.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
     public final void setTextSize(float size) {

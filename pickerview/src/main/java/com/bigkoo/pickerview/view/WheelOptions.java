@@ -426,4 +426,10 @@ public class WheelOptions<T> {
         wv_option2.setAlphaGradient(isAlphaGradient);
         wv_option3.setAlphaGradient(isAlphaGradient);
     }
+
+    public void setTypeface_select(Typeface font) {
+        wv_option1.setTypeface_select(font);
+        wv_option2.setTypeface_select(font);
+        wv_option3.setTypeface_select(font);
+    }
 }
