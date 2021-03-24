@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -196,7 +197,7 @@ public class WheelView extends View {
         paintCenterText.setColor(textColorCenter);
         paintCenterText.setAntiAlias(true);
         paintCenterText.setTextScaleX(1.1F);
-        paintCenterText.setTypeface(typeface);
+        paintCenterText.setTypeface(Typeface.DEFAULT_BOLD);
         paintCenterText.setTextSize(textSize);
 
         paintIndicator = new Paint();
@@ -252,7 +253,7 @@ public class WheelView extends View {
             }
         }
         paintCenterText.getTextBounds("\u661F\u671F", 0, 2, rect); // 星期的字符编码（以它为标准高度）
-        maxTextHeight = rect.height() + 2;
+        maxTextHeight = rect.height() + 20;
         itemHeight = lineSpacingMultiplier * maxTextHeight;
     }
 
@@ -294,7 +295,7 @@ public class WheelView extends View {
     public final void setTypeface(Typeface font) {
         typeface = font;
         paintOuterText.setTypeface(typeface);
-        paintCenterText.setTypeface(typeface);
+        paintCenterText.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
     public final void setTextSize(float size) {
@@ -416,6 +417,20 @@ public class WheelView extends View {
             endX = measuredWidth - startX;
             canvas.drawLine(startX, firstLineY, endX, firstLineY, paintIndicator);
             canvas.drawLine(startX, secondLineY, endX, secondLineY, paintIndicator);
+        }else if (dividerType == DividerType.FILL) {
+
+            int canvasWidth = canvas.getWidth();
+            //修改画笔颜色
+//            paintIndicator.setColor(0xFFFF88B8);//A:ff,R:8b,G:c5,B:ba
+            int left2 = 40;
+            int right2 = canvasWidth - 40;
+            RectF r1 = new RectF();
+            r1.left = left2;
+            r1.top = firstLineY ;
+            r1.right = right2;
+            r1.bottom = secondLineY;
+
+            canvas.drawRoundRect(r1,20,20, paintIndicator);
         } else if (dividerType == DividerType.CIRCLE) {
             //分割线为圆圈形状
             paintIndicator.setStyle(Paint.Style.STROKE);
