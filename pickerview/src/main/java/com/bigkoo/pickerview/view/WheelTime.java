@@ -1,5 +1,6 @@
 package com.bigkoo.pickerview.view;
 
+import android.graphics.Typeface;
 import android.view.View;
 
 import com.bigkoo.pickerview.R;
@@ -643,6 +644,16 @@ public class WheelTime {
         wv_minutes.setCyclic(cyclic);
         wv_seconds.setCyclic(cyclic);
     }
+
+    public void  setTypeface_select(Typeface font) {
+        wv_year.setTypeface_select(font);
+        wv_month.setTypeface_select(font);
+        wv_day.setTypeface_select(font);
+        wv_hours.setTypeface_select(font);
+        wv_minutes.setTypeface_select(font);
+        wv_seconds.setTypeface_select(font);
+    }
+
 
     public String getTime() {
         if (isLunarCalendar) {

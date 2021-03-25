@@ -192,7 +192,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 })
                 .setType(new boolean[]{true, true, true, false, false, false})
                 .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
-                .setDividerColor(Color.RED)
+                .setDividerColor(0xFFFFF1F7)
+                .setDividerType(WheelView.DividerType.FILL)
+                .setTypeface_select(Typeface.MONOSPACE)
                 .build();
     }
 

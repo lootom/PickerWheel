@@ -428,7 +428,7 @@ public class WheelView extends View {
 
             int canvasWidth = canvas.getWidth();
             //修改画笔颜色
-//            paintIndicator.setColor(0xFFFF88B8);//A:ff,R:8b,G:c5,B:ba
+            paintIndicator.setColor(0xFFFFF1F7);
             int left2 = 0;
             int right2 = canvasWidth;
             RectF r1 = new RectF();

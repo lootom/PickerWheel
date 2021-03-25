@@ -2,6 +2,7 @@ package com.bigkoo.pickerviewdemo;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +14,7 @@ import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.bigkoo.pickerviewdemo.bean.JsonBean;
+import com.contrarywind.view.WheelView;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
