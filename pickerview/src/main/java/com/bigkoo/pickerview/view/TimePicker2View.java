@@ -23,7 +23,6 @@ import java.util.Date;
  * Updated by XiaoSong on 2017-2-22.
  */
 public class TimePicker2View extends BasePickerView implements View.OnClickListener {
-
     private Wheel2Time wheelTime; //自定义控件
     private static final String TAG_SUBMIT = "submit";
     private static final String TAG_CANCEL = "cancel";
