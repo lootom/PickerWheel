@@ -10,6 +10,7 @@ import com.bigkoo.pickerview.configure.PickerOptions;
 import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectChangeListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.bigkoo.pickerview.view.TimePicker2View;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.contrarywind.view.WheelView;
 
@@ -316,5 +317,8 @@ public class TimePickerBuilder {
 
     public TimePickerView build() {
         return new TimePickerView(mPickerOptions);
+    }
+    public TimePicker2View build2() {
+        return new TimePicker2View(mPickerOptions);
     }
 }
