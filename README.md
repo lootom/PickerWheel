@@ -1,5 +1,5 @@
 
-## Android-PickerView 转载-----敬Android
+## Android-PickerView
 
 [![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg)](https://android-arsenal.com/api?level=9) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
@@ -19,7 +19,7 @@
 交流群2： 219962328（已满）
 
 ## 介绍
-
+ 转载-----敬Android
 这是一款仿iOS的PickerView控件，有时间选择器和选项选择器，新版本的详细特性如下：
  
 ——TimePickerView  时间选择器，支持年月日时分，年月日，年月，时分等格式。   
