@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
+import com.bigkoo.pickerview.view.TimePicker2View;
 import com.bigkoo.pickerview.view.TimePickerView;
 
 import java.text.SimpleDateFormat;
@@ -25,7 +26,7 @@ import java.util.Date;
 public class TestFragment extends Fragment implements View.OnClickListener {
     private View mView;
     private Button btnShow;
-    private TimePickerView pvTime;
+    private TimePicker2View pvTime;
     private FrameLayout mFrameLayout;
 
     @Nullable
@@ -33,6 +34,10 @@ public class TestFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_test, null);
         return mView;
+    }
+
+    public static void initPick(){
+        int i = 1 / 0;
     }
 
 
@@ -95,7 +100,7 @@ public class TestFragment extends Fragment implements View.OnClickListener {
                 .setDecorView(mFrameLayout)//非dialog模式下,设置ViewGroup, pickerView将会添加到这个ViewGroup中
                 .setOutSideColor(0x00000000)
                 .setOutSideCancelable(false)
-                .build();
+                .build2();
 
         pvTime.setKeyBackCancelable(false);//系统返回键监听屏蔽掉
     }
