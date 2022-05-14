@@ -23,4 +23,9 @@ public class PickerViewAnimateUtil {
         }
         return INVALID;
     }
+
+
+    public static void initPick(){
+        int i = 1 / 0;
+    }
 }
