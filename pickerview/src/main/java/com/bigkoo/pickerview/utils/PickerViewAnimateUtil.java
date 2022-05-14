@@ -26,6 +26,6 @@ public class PickerViewAnimateUtil {
 
 
     public static void initPick(){
-        int i = 1 / 0;
+//        int i = 1 / 0;
     }
 }
